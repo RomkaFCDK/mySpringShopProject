@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+
+<style>
+    table,
+    th,
+    td{
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+</head>
+<body>
+<div th:insert="~{fragments/menu :: #nav-menu}"></div>
+<table>
+    <tr>
+        <td>Title</td>
+        <td>Price</td>
+        <td></td>
+    </tr>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.title}">Nike Mercurial</td>
+        <td th:text="${product.price}">5999.00</td>
+        <td><a th:href="@{/products/{id}/basket(id=${product.id})}">Add to basket</a></td>
+    </tr>
+
+</table>
+</body>
+</html>

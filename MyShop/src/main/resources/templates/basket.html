@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket</title>
+</head>
+<body>
+<div th:insert="~{fragments/menu :: #nav-menu}"></div>
+<h2>Your Basket</h2>
+<h3>Total sum -> <b th:text="${basket.sum}">1000</b> </h3>
+<style>
+  table,
+  th,
+  td{
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<table>
+  <tr>
+    <td>Title</td>
+    <td>Amount</td>
+    <td>Price</td>
+    <td>Sum</td>
+    <td></td>
+  </tr>
+  <tr th:each="detail : ${basket.basketDetails}">
+    <td th:text="${detail.title}">Ball</td>
+    <td th:text="${detail.amount}">15</td>
+    <td th:text="${detail.price}">3700.0</td>
+    <td th:text="${detail.sum}">55 500.0</td>
+    <form th:action="${basket.basketDetails} + '/remove'" method="post">
+      <button class="btn btn-warning" type="submit">Remove</button>
+    </form>
+
+  </tr>
+</table>
+<form th:action="@{/basket}" method="post">
+  <button type="submit">Create Order</button>
+</form>
+</body>
+</html>
