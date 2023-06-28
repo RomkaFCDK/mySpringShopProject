@@ -11,4 +11,7 @@ spring:
     password: Ra3380408659
   flyway:
     baseline-on-migrate: true
+server:
+  hostname: localhost
+  port: ${PORT:8080}
 
