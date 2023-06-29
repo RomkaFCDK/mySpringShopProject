@@ -6,9 +6,10 @@ spring:
       ddl-auto: validate
     show-sql: true
   datasource:
-    url: jdbc:postgresql://ec2-34-242-199-141.eu-west-1.compute.amazonaws.com:5432/shop
-    username: zsjhhfnomnraek
-    password: d0e0468667253157ecebdd42a47467a62daf5b4266caaaa8c7927844b0e4b6ff
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:${DATABASE_PATH}
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
   flyway:
     baseline-on-migrate: true
 server:
