@@ -5,7 +5,7 @@ spring:
     show-sql: true
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:${DATABASE_URL}
+    url: jdbc:${DATABASE_PATH}
     username: ${DATABASE_USER}
     password: ${DATABASE_PASSWORD}
   flyway:
