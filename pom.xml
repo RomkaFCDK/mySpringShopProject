@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.adamenko</groupId>
-    <artifactId>mySpringShopProject</artifactId>
+    <artifactId>MyShop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>MyShop</name>
     <description>MyShop</description>
