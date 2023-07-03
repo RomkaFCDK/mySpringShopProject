@@ -11,6 +11,6 @@ spring:
   flyway:
     baseline-on-migrate: true
 server:
-  hostname: ec2-34-242-199-141.eu-west-1.compute.amazonaws.com
+  hostname: localhost
   port: ${PORT:5432}
 
