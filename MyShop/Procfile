@@ -1,1 +1,1 @@
-web: java -jar target/mySpringShopProject-0.0.1-SNAPSHOT.jar -Dserver.port=$PORT $JAVA_OPTS
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/MyShop-0.0.1-SNAPSHOT.jar
