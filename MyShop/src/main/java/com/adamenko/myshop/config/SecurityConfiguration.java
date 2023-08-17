@@ -26,7 +26,7 @@ import static org.springframework.http.HttpMethod.*;
 public class SecurityConfiguration {
     private UserService userService;
 
-    @Autowired
+
     public void setUserService(UserService userService) {
 
         this.userService = userService;
