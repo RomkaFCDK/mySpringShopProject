@@ -1,1 +1,1 @@
-web: java -jar C:\Users\Роман\OneDrive\Documents\GitHub\mySpringShopProject-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/mySpringShopProject-0.0.1-SNAPSHOT.jar
