@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Controller
 public class MainController {
-    @RequestMapping({"","/"})
+    @RequestMapping("/")
     public String index(){
         return "index";
     }
