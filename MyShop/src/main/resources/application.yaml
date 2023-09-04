@@ -12,5 +12,5 @@ spring:
     baseline-on-migrate: true
 server:
   hostname: localhost
-  port: ${PORT:8622}
+  port: ${PORT:8080}
 
